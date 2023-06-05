@@ -1,4 +1,4 @@
-from flask import render_template, redirect, session, request
+from flask import render_template, redirect, session, request, flash
 from flask_app import app
 from flask_app.models.book import Book
 from flask_app.models.user import User
@@ -37,6 +37,7 @@ def create_book():
     if 'user_id' not in session:
         return redirect('/logout')
     if not Book.validate_book(request.form):
+        flash("", "book")
         return redirect('/books')
     data = {
         "user_id": session['user_id'],

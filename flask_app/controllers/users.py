@@ -29,7 +29,7 @@ def reg_page():
 @app.route('/register', methods=['POST'])
 def register():
     if not User.validate_registration(request.form):
-        return redirect('/register')
+        return redirect('/registration')
     data ={ 
         "first_name": request.form['first_name'],
         "last_name": request.form['last_name'],
@@ -46,8 +46,10 @@ def login():
     user = User.get_user_by_email(request.form)
     if not user:
         flash("Email doesn't exist in the Database", "login")
+        return redirect('/log_page')
     if not bcrypt.check_password_hash(user.password, request.form['password']):
         flash("Invalid Password", "login")
+        return redirect('/log_page')
     session['user_id'] = user.id
     return redirect('/books')
 
