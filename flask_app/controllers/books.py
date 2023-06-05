@@ -31,7 +31,7 @@ def books():
     return render_template("club.html", user=user, books=books, books_list=books_list)
 
 
-# #===================Creating a TV Show==============================
+# #===================Creating a Book==============================
 @app.route('/add_new', methods=['POST'])
 def create_book():
     if 'user_id' not in session:

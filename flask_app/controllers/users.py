@@ -1,4 +1,4 @@
-from flask import render_template, redirect, session, request, flash
+from flask import render_template, redirect, session, request, flash, url_for
 from flask_app import app
 from flask_app.models.book import Book
 from flask_app.models.user import User
@@ -51,7 +51,7 @@ def login():
         flash("Invalid Password", "login")
         return redirect('/log_page')
     session['user_id'] = user.id
-    return redirect('/books')
+    return redirect('books')
 
 
 #===================The logout method==============================
