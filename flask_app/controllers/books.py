@@ -37,7 +37,6 @@ def create_book():
     if 'user_id' not in session:
         return redirect('/logout')
     if not Book.validate_book(request.form):
-        flash("", "book")
         return redirect('/books')
     data = {
         "user_id": session['user_id'],
