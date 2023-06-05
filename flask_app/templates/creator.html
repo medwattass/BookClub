@@ -28,7 +28,7 @@
         }
         body {
             background-repeat: repeat;
-            background-image: url("https://unsplash.com/photos/Y7d265_7i08/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fGxpYnJhcnl8ZW58MHx8fHwxNjg1NTU0NzYxfDA&force=true&w=2400");  
+            background-image: url("https://unsplash.com/photos/8muUTAmcWU4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjF8fGxpYnJhcnl8ZW58MHx8fHwxNjg1OTg4OTQ0fDA&force=true&w=1920");  
             background-size: initial;
         }
     </style>
@@ -60,7 +60,7 @@
                 <form action="/books/update/{{book.id}}" method="POST">
                     <div class="mb-3 mt-3">
                         <label for="title" class="text-light">Title:</label>
-                        <input type="text" class="form-control transparency" id="title" value="{{book.title}}" name="title" required>
+                        <input type="text" class="form-control transparency text-bg-dark" id="title" value="{{book.title}}" name="title" required>
                     </div>
                     <div class="mb-3 mt-3">
                         <p class="text-light">Added by: {{user.first_name}} {{user.last_name}}</p>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="mb-3 transparent-form">
                         <label for="description" class="text-light">Description:</label>
-                        <textarea class="form-control transparency" rows="5" id="description" name="description" required>{{book.description}}</textarea>
+                        <textarea class="form-control transparency text-bg-dark" rows="5" id="description" name="description" required>{{book.description}}</textarea>
                     </div>
                     <button type="submit" class="btn btn-dark">Update</button>
                 </form>

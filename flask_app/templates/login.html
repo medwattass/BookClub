@@ -25,7 +25,7 @@
         }
         body {
             background-repeat: no-repeat;
-            background-image: url("https://unsplash.com/photos/Y7d265_7i08/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fGxpYnJhcnl8ZW58MHx8fHwxNjg1NTU0NzYxfDA&force=true&w=2400");  
+            background-image: url("https://unsplash.com/photos/8muUTAmcWU4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjF8fGxpYnJhcnl8ZW58MHx8fHwxNjg1OTg4OTQ0fDA&force=true&w=1920");  
             background-size: initial;
         }
     </style>
@@ -39,7 +39,7 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card transparent-box" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Login</h2>
+                                <h2 class="text-uppercase text-center mb-5 text-light">Login</h2>
                                 <form action="/login" method="post">
                                     {% with messages = get_flashed_messages(category_filter=['login']) %}
                                         {% if messages %}
@@ -52,19 +52,19 @@
                                         {% endif %}
                                     {% endwith %}
                                     <div class="form-outline mb-4">
+                                        <label class="form-label text-light" for="email">Your Email</label>
                                         <input type="email" id="email" name="email" class="form-control form-control-lg" required/>
-                                        <label class="form-label" for="email">Your Email</label>
                                     </div>
                                     <div class="form-outline mb-4">
+                                        <label class="form-label text-light" for="password">Password</label>
                                         <input type="password" id="password" name="password" class="form-control form-control-lg" required/>
-                                        <label class="form-label" for="password">Password</label>
                                     </div>
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn-light btn-block btn-lg gradient-custom-4 text-body">Login</button>
                                     </div>
                                     
-                                    <p class="text-center text-muted mt-5 mb-0">You don't have an account? <a
-                                            href="/registration" class="fw-bold text-body"><u>Create an account
+                                    <p class="text-center text-muted mt-5 mb-0"><span class="text-light">You don't have an account? </span><a
+                                            href="/registration" class="fw-bold text-body"><u class="text-light">Create an account
                                                 here</u></a></p>
                                 </form>
                             </div>
